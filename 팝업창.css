@@ -1,0 +1,61 @@
+input[id*="popup"]{
+    display:none;
+  }
+  
+  input[id*="popup"] + label {
+    display:inline-block;
+    font-size:15px;
+    margin: 0px 0px 0px 4px;
+    padding:8px 12px;
+    border-radius: 5%; 
+    background:#01d28e;
+    color:#fff;
+  }
+  
+  input[id*="popup"] + label + div{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:100;
+  }
+  
+  input[id*="popup"] + label + div > div{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    transform: translate(-50%,-50%);
+    z-index:2;
+  }
+  
+  input[id*="popup"] + label + div > div > label {
+    position:fixed;
+    top: 0%;
+    right: 0%;
+    transform:translate(-40%,-40%);
+    padding: 20px;
+    background-image:url("https://dictionary.cambridge.org/ko/images/thumb/cross_noun_002_09265.jpg?version=5.0.239") ;
+    background-size: cover; 
+    border-radius:100%;
+    z-index:1;
+  }
+  
+  input[id*="popup"] + label + div > label{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.9);
+    z-index:1;
+  }
+  input[id*="popup"] + label + div {
+    display: none;
+  }
+  
+  input[id*="popup"]:checked + label + div {
+    display: block;
+  }
